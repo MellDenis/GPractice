@@ -8,8 +8,8 @@ function createList() {
     divList.innerHTML = listAction;
 }
 
-function createDiv() {
+function createList() {
     var buttonSubmit = document.getElementById("submit");
     buttonSubmit.addEventListener("click", createList());
-    console.log("Se creo el div");
+    console.log("ready");
 };
