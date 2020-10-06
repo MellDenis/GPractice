@@ -8,7 +8,7 @@ function createList() {
     divList.innerHTML = listAction;
 }
 
-function createList() {
+function divList() {
     var buttonSubmit = document.getElementById("submit");
     buttonSubmit.addEventListener("click", createList());
     console.log("ready");
