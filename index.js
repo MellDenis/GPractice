@@ -1,15 +1,22 @@
+var actionItem = document.getElementById("txtAction");
+var buttonSubmit = document.getElementById("buttonSubmit");
+var list = document.getElementById("listItems");
+
 function createList() {
 
-    var listAction = [];
-    var action = document.getElementById("txtAction");
-    listAction.push(action);
-    console.log(listAction);
-    var divList = document.getElementById("listaAcciones");
-    divList.innerHTML = listAction;
+    var valueAction = actionItem.value;
+    var content = document.createTextNode(valueAction);
+    var item = document.createElement('li');   
+    item.setAttribute('class','list-group-item');
+    item.appendChild(content);
+    list.appendChild(item); 
 }
 
+//Create Event
 function divList() {
-    var buttonSubmit = document.getElementById("submit");
+
     buttonSubmit.addEventListener("click", createList());
-    console.log("ready");
 };
+
+//Comprobar input vacío
+ 
