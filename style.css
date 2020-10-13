@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+html,body {
+    font-family: 'Roboto';
+    color: #303a52;
+}
+
+.spaceBetween {
+    padding: 1.7em;
+}
+
+.buttonSpace {
+    padding: 1.5em;
+}
+
+
+
