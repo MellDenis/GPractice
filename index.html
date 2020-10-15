@@ -28,29 +28,25 @@
         </button>
     </div>
 
-    <!-- <div id="buttonsAction" class="container d-flex justify-content-center spaceBetween">
-        <button type="submit" class="btn btn-outline-warning mr-3" id="buttonEdit" onclick="editItems()">Edit</button>
-        <button type="submit" class="btn btn-outline-danger" id="buttonDelete" onclick="deleteItems()">Delete</button>
-    </div> -->
-
-
     <div class="container-fluid ">
-        <div class="row">
-            <div class="col-6 text-center bg-primary card-body" id="listaAcciones">
+        
+            <div class="text-center card-body border border-primary rounded-lg" id="listaAcciones">
                 <h5 class="card-title">ACTIONS</h5>
-                <ul class="list-group " id="listItems">
+                <hr>
+                <ul class="list-group list-group-flush" id="listItems">
                 </ul>
             </div>
-
-            <div class="col-6 text-center bg-info card-body" id="accionesActivas">
-                <h5 class="card-title">ACTIVE ACTION</h5>
+            <hr class="disableHr">
+            <div class="text-center card-body border border-info rounded-lg" id="accionesActivas">
+                <h5 class="card-title">ACTIVE ACTIONS</h5>
+                <hr>
                 <ul class="list-group list-group-flush" id="listActives">
                 </ul>
             </div>
-        </div>
+        
     </div>
 
-    <div class="container-fluid">
+    <div class="container-fluid spaceBetween2">
         <button class="btn btn-outline-danger" type="button" id="buttonDeleteAll" onclick="deleteAll()">DELETE
             ALL</button>
     </div>
@@ -63,6 +59,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
         $('.alert').hide();
+        $('#buttonDeleteAll').hide();
     </script>
 </body>
 

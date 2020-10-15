@@ -22,3 +22,6 @@
 9. Que la app sea Responsive.
 
 10.Razonamiento de estructura del proyecto.
+
+Al principio se utilizo una estructura que permitia Editar o Borrar algún item cuando se realizara click sobre el mismo.
+Luego la estructura se cambio al colocar los Botones de acciones dentro de cada item, permitiendo que al Activar una acción pudiera realizar el pase a la lista de Acciones Activas.

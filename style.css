@@ -1,21 +1,48 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 
-html,body {
+html,
+body {
     font-family: 'Roboto';
     color: #303a52;
 }
 
-.spaceBetween {
-    padding: 1.7em;
+hr {
+    border-top: 0.2px solid #b4b4b4;
+    width: 100%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
-.buttonSpace {
-    padding: 1.5em;
+#buttonSubmit {
+    width: 4em;
+    height: 2.5em;
+}
+
+.disableHr {
+    border-top: 0.2px  #b4b4b4;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+.spaceBetween {
+    
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+
+.inputTextStyle {
+    margin: 0Px 10px 0px 10px;
 }
 
 label {
-    color : #1b262c;
+    color: #1b262c;
+    margin-top: 0.5em;
+}
+
+
+.spaceBetween2 {
+    padding-top: 2em;
 }
 
 .inputTextStyle {
@@ -23,5 +50,8 @@ label {
     height: 2.5em;
 }
 
+#listActives li {
+    text-decoration: line-through;
+}
 
 

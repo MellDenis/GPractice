@@ -3,7 +3,7 @@ var actionItem = document.getElementById("txtAction");
 var buttonSubmit = document.getElementById("buttonSubmit");
 var buttonDeleteAll = document.getElementById('buttonDeleteAll');
 var list = document.getElementById("listItems");
-var listActives = document.getElementById(listActives);
+var listActives = document.getElementById("listActives");
 
 
 //Create an action element
@@ -12,9 +12,8 @@ function createNewElement(text) {
     //Create an 'li'
     var item = document.createElement('li');
     //Value set by the user in the input
-    item.innerText = text;
-    //var content = document.createTextNode(valueAction);
-    //var itemsLi = list.getElementsByTagName('li');
+    //item.innerText = text;
+    item.className = 'list-group-item list-group-item-action';
 
     //Create container for input and buttons
     let divContainer = document.createElement('div');
@@ -28,10 +27,13 @@ function createNewElement(text) {
     //Set attribute
     inputActionList.setAttribute('type', 'text');
     inputActionList.classList.add('form-control');
+    inputActionList.value = text;
+    console.log(inputActionList.value);
+    inputActionList.disabled = true;
 
     //Create the 3 buttons
     let buttonActive = document.createElement('button');
-    buttonActive.className = 'btn btn-outline-success';
+    buttonActive.className = 'btn btn-outline-success ml-1';
     buttonActive.innerText = 'ACTIVE';
 
     //Add eventListener for active
@@ -39,14 +41,14 @@ function createNewElement(text) {
 
 
     let buttonEdit = document.createElement('button');
-    buttonEdit.className = 'btn btn-outline-warning';
+    buttonEdit.className = 'btn btn-outline-warning ml-1';
     buttonEdit.innerText = 'EDIT';
 
     //Add eventListener for edit
-    //buttonEdit.addEventListener('click', editInfoInput);
+    buttonEdit.addEventListener('click', editItem);
 
     let buttonDelete = document.createElement('button');
-    buttonDelete.className = 'btn btn-outline-danger';
+    buttonDelete.className = 'btn btn-outline-danger ml-1';
     buttonDelete.innerText = 'DELETE';
 
     //Add eventListener for delete
@@ -76,6 +78,7 @@ function addItemToList() {
     if (valueAction != "") {
         createNewElement(valueAction);
         actionItem.value = "";
+        $('#buttonDeleteAll').show();
     } else {
         $('.alert').show();
     }
@@ -105,7 +108,7 @@ function sendToActiveList() {
 
 }
 
-//Remove item by one
+//Delete item one by one 
 function deleteItem() {
     //Searching the childItem
     let itemChild = this.parentNode.parentNode.parentNode;
@@ -117,14 +120,26 @@ function deleteItem() {
 
 //Delete all items
 function deleteItems() {
-    var childItem = list.children.length;
-    console.log(childItem);
-    while (list.firstChild) {
-        list.removeChild(list.firstChild);
-    }
+    //Removing one by one the items
+    // var childItem = list.children.length;
+    // console.log(childItem);
+    // while (list.firstChild) {
+    //     list.removeChild(list.firstChild);
+    // }
+    list.innerHTML = " ";
+    listActives.innerHTML = " ";
 };
 
 //Create Delete Event
 function deleteAll() {
     buttonDeleteAll.addEventListener('click',deleteItems());
+}
+
+
+//Create Edit item
+function editItem() {
+    var listItem = this.parentNode;
+    console.log(listItem);
+    var inputDisable = listItem.querySelector('input[type=text]');
+    inputDisable.disabled = false;
 }
