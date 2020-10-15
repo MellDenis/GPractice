@@ -10,20 +10,16 @@
 </head>
 
 <body>
-    <section>
-        <div class="container padding text-md-center spaceBetween" id="firstDiv">
-            <h2>Action List</h2>
-        </div>
-    </section>
 
-    <section>
-        <div class="container-fluid padding spaceBetween" id="formDiv">
-            <input type="text" class="form-control" placeholder="Enter action" pattern="[a-zA-ZáéíóúÁÉÍÓÚ]+"
-                minlength="4" maxlength="40" id="txtAction">
+    <div class="container-fluid d-flex justify-content-center spaceBetween" id="formDiv">
+        <label>Add action</label>
+        <input type="text" class="form-control inputTextStyle" placeholder="Enter action" pattern="[a-zA-ZáéíóúÁÉÍÓÚ]+"
+            minlength="4" maxlength="40" id="txtAction">
 
-            <button type="submit" class="btn btn-info" id="buttonSubmit" onclick="divList()">Submit</button>
-        </div>
-    </section>
+        <button type="submit" class="btn btn-dark" id="buttonSubmit" onclick="divList()">
+            Add
+        </button>
+    </div>
 
     <div class="alert alert-warning alert-dismissible fade show" role="alert">
         <strong>Holy guacamole!</strong> You should check on the field above.
@@ -31,29 +27,34 @@
             <span aria-hidden="true">&times;</span>
         </button>
     </div>
-    
-    <div id="buttonsAction" class="container d-flex justify-content-center spaceBetween">
+
+    <!-- <div id="buttonsAction" class="container d-flex justify-content-center spaceBetween">
         <button type="submit" class="btn btn-outline-warning mr-3" id="buttonEdit" onclick="editItems()">Edit</button>
         <button type="submit" class="btn btn-outline-danger" id="buttonDelete" onclick="deleteItems()">Delete</button>
-    </div>
-    
+    </div> -->
 
-    <div class="container-fluid">
+
+    <div class="container-fluid ">
         <div class="row">
-            <div class="col-6" id="listaAcciones">
-                <h5><span class="badge badge-light">List of actions</span></h5>
-                <ol class="list-group " id="listItems">
-                    <!-- <button type="button" class="btn btn-info" id="buttonActive">A</button> -->
-                </ol>
+            <div class="col-6 text-center bg-primary card-body" id="listaAcciones">
+                <h5 class="card-title">ACTIONS</h5>
+                <ul class="list-group " id="listItems">
+                </ul>
             </div>
 
-            <div class="col-6" id="accionesActivas">
-                <h5><span class="badge badge-light">List of active actions</span></h5>
-                <ol class="list-group list-group-flush" id="listActives">
-                </ol>
+            <div class="col-6 text-center bg-info card-body" id="accionesActivas">
+                <h5 class="card-title">ACTIVE ACTION</h5>
+                <ul class="list-group list-group-flush" id="listActives">
+                </ul>
             </div>
         </div>
     </div>
+
+    <div class="container-fluid">
+        <button class="btn btn-outline-danger" type="button" id="buttonDeleteAll" onclick="deleteAll()">DELETE
+            ALL</button>
+    </div>
+
 
 
     <script src="index.js"></script>

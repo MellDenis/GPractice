@@ -14,5 +14,14 @@ html,body {
     padding: 1.5em;
 }
 
+label {
+    color : #1b262c;
+}
+
+.inputTextStyle {
+    width: 40em;
+    height: 2.5em;
+}
+
 
 
